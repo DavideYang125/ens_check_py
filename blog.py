@@ -20,7 +20,7 @@ with open('base_registrar_abi.json', 'r') as f:
 base_registrar = w3.eth.contract(address=BASE_REGISTRAR_ADDRESS, abi=base_registrar_abi)
 
 # 查询 ENS 域名的到期时间
-label = "testenstomain"  # 域名前缀
+label = "testensdomain"  # 域名前缀
 label_hash = w3.keccak(text=label)                # 得到 bytes
 token_id = int.from_bytes(label_hash, 'big')      # 转为 uint256
 
